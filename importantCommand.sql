@@ -2,8 +2,8 @@ SELECT           -- to extract data from a database
 UPDATE           -- to update data in a database
 DELETE           -- to delete data from a database
 INSERT INTO      -- to inserts new data into a database
-CREATE DATABASE  -- to create a new database
-ALTER DATABASE   -- to modify a database
+CREATE DBname    -- to create a new database
+ALTER DBname     -- to modify a database
 CREATE TABLE     -- to creates a new table
 ALTER TABLE      -- to modify a table
 DROP TABLE       -- to delete a table
@@ -11,21 +11,11 @@ CREATE INDEX     -- creates an index (search key)
 DROP INDEX       -- deletes an index
 SHOW databases   -- to see the databases
 USE DBname       -- to use DB'
-
--- to see TABLES
-SHOW tables;
-
--- to seeSTRUCTURE OF THE TABLE
-DESCRIBE tableName;
-
--- to search DB
-SELECT DBname;
-
--- to log with password
-mysql -u root -p
-
--- to log
-mysql -u root
+SHOW TABLES;     -- to see the TABLES
+DESCRIBE tableName  -- to see the STRUCTURE OF THE TABLE
+SELECT DBname    -- to search DB
+mysql -u root -p -- to log with password
+mysql -u root    -- to log
 
 -- to change username
 ALTER USER 'root'@'localhost' IDENTIFIED BY '12345678';
