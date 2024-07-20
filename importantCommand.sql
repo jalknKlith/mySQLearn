@@ -1,13 +1,13 @@
-SELECT           'to extract data from a database'
-UPDATE           'to update data in a database'
-DELETE           'to delete data from a database'
-INSERT INTO      'to inserts new data into a database'
-CREATE DATABASE  'to create a new database'
-ALTER DATABASE   'to modify a database'
-CREATE TABLE     'to creates a new table'
-ALTER TABLE      'to modify a table'
-DROP TABLE       'to delete a table'
-CREATE INDEX     -- creates an index (search key)'
+SELECT           -- to extract data from a database
+UPDATE           -- to update data in a database
+DELETE           -- to delete data from a database
+INSERT INTO      -- to inserts new data into a database
+CREATE DATABASE  -- to create a new database
+ALTER DATABASE   -- to modify a database
+CREATE TABLE     -- to creates a new table
+ALTER TABLE      -- to modify a table
+DROP TABLE       -- to delete a table
+CREATE INDEX     -- creates an index (search key)
 DROP INDEX       -- deletes an index
 SHOW databases   -- to see the databases
 USE DBname       -- to use DB'
