@@ -12,19 +12,28 @@ DROP INDEX       -- deletes an index
 SHOW databases   -- to see the databases
 USE DBname       -- to use DB'
 SHOW TABLES;     -- to see the TABLES
-DESCRIBE tableName  -- to see the STRUCTURE OF THE TABLE
 SELECT DBname    -- to search DB
 mysql -u root -p -- to log with password
 mysql -u root    -- to log
+ORDER BY         -- to sort the result-set
 
+-- to see the STRUCTURE OF THE TABLE
+DESCRIBE tableName 
+
+-- to delete all records
+DELETE FROM tableNAME;
+
+-- to delete statements
+DELETE FROM tableNAME WHERE condition;
+
+-- to order by
+SELECT colNAME FROM tableNAME order by colNAME ASC|DESC;
+  
 -- to change username
 ALTER USER 'root'@'localhost' IDENTIFIED BY '12345678';
 
 -- to change table name
 ALTER TABLE 'tableName' CHANGE 'currentColNAME' 'newColNAME';
-
--- to order by
-SELECT colNAME FROM tableNAME order by colNAME ASC|DESC;
 
 -- to export DB
 mysqldump -u root -p database_name > export.sql
@@ -42,9 +51,3 @@ SELECT colNAME FROM tableNAME WHERE colNAME IS NOT NULL;
 -- to update statements
 UPDATE tableNAME SET column1 = value1;
 UPDATE tableNAME SET column1 = value1, column2 = value WHERE condition;
-
--- to delete all records
-DELETE FROM tableNAME;
-
--- to delete statements
-DELETE FROM tableNAME WHERE condition;
