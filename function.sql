@@ -1,3 +1,4 @@
+-- String Functions
 ASCII	            Returns the ASCII value for the specific character
 CHAR_LENGTH	      Returns the length of a string (in characters)
 CHARACTER_LENGTH	Returns the length of a string (in characters)
