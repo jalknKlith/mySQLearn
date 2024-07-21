@@ -51,3 +51,6 @@ SELECT colNAME FROM tableNAME WHERE colNAME IS NOT NULL;
 -- to update statements
 UPDATE tableNAME SET column1 = value1;
 UPDATE tableNAME SET column1 = value1, column2 = value WHERE condition;
+
+-- to create a non-clustered index on an already existing table
+ALTER TABLE ADD INDEX column;
