@@ -72,3 +72,34 @@ ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);
 -- to drop a PRIMARY KEY
 ALTER TABLE Persons
 DROP PRIMARY KEY;
+
+-- FOREIGN KEY
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+
+-- defining a FOREIGN KEY constraint on multiple columns
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+    REFERENCES Persons(PersonID)
+);
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+
