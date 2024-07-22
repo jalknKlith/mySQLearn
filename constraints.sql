@@ -11,21 +11,20 @@ ALTER TABLE tableName
 MODIFY colName int NOT NULL;
 
 -- UNIQUE
-ALTER TABLE Persons
-ADD UNIQUE (ID);
+ALTER TABLE tableName
+ADD UNIQUE (col1);
 
-ALTER TABLE Persons
-ADD CONSTRAINT UC_Person UNIQUE (ID,LastName);
+ALTER TABLE tableName -- multiple columns
+ADD CONSTRAINT UC_tabelName UNIQUE (col1,col2);
 
-ALTER TABLE Persons
-DROP INDEX UC_Person;
+ALTER TABLE tableName
+DROP INDEX UC_tableName;
 
 -- PRIMARY KEY
 ALTER TABLE tableName
 ADD PRIMARY KEY (colName);
 
--- multiple columns
-ALTER TABLE tableName
+ALTER TABLE tableName -- multiple columns
 ADD CONSTRAINT PK_tableName PRIMARY KEY (col1,col2);
 
 ALTER TABLE tableName
@@ -35,12 +34,10 @@ DROP PRIMARY KEY;
 ALTER TABLE tableName
 ADD FOREIGN KEY (colName) REFERENCES foreignTable(foreignCol);
 
--- multiple columns
-ALTER TABLE Orders
-ADD CONSTRAINT FK_PersonOrder
-FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+ALTER TABLE Orders -- multiple columns
+ADD CONSTRAINT FK_tableName
+FOREIGN KEY (colName) REFERENCES foreignTable(colName);
 
 -- dropping a foreign key
 ALTER TABLE tableName
 DROP FOREIGN KEY FK_colName;
-
