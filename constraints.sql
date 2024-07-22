@@ -38,6 +38,15 @@ ALTER TABLE Orders -- multiple columns
 ADD CONSTRAINT FK_tableName
 FOREIGN KEY (colName) REFERENCES foreignTable(colName);
 
--- dropping a foreign key
 ALTER TABLE tableName
 DROP FOREIGN KEY FK_colName;
+
+-- CHECK
+ALTER TABLE tableName
+ADD CHECK (colName>=18);
+
+ALTER TABLE tableName -- multiple columns
+ADD CONSTRAINT CHK_colName CHECK (Age>=18 AND City='Sandnes');
+
+ALTER TABLE tableName
+DROP CHECK CHK_colName;
