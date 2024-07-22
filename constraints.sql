@@ -6,40 +6,33 @@ CHECK         Ensures that the values in a column satisfies a specific condition
 DEFAULT       Sets a default value for a column if no value is specified
 CREATE INDEX  Used to create and retrieve data from the database very quickly
 
--- example NOT NULL
-CREATE TABLE Persons (
-    ID int NOT NULL,
-    LastName varchar(255) NOT NULL,
-    FirstName varchar(255) NOT NULL,
-    Age int
-);
+-- NOT NULL
+ALTER TABLE tableName
+MODIFY colName int NOT NULL;
 
-ALTER TABLE Persons
-MODIFY Age int NOT NULL;
-
--- example UNIQUE
-CREATE TABLE Persons (
-    ID int NOT NULL,
-    LastName varchar(255) NOT NULL,
-    FirstName varchar(255),
-    Age int,
-    UNIQUE (ID)
-);
-
+-- UNIQUE
 ALTER TABLE Persons
 ADD UNIQUE (ID);
 
--- to name a UNIQUE constraint, and to define a UNIQUE constraint on multiple columns
-CREATE TABLE Persons (
-    ID int NOT NULL,
-    LastName varchar(255) NOT NULL,
-    FirstName varchar(255),
-    Age int,
-    CONSTRAINT UC_Person UNIQUE (ID,LastName)
-);
-
 ALTER TABLE Persons
 ADD CONSTRAINT UC_Person UNIQUE (ID,LastName);
+
+ALTER TABLE Persons
+DROP INDEX UC_Person;
+
+-- PRIMARY KEY
+ALTER TABLE tableName
+ADD PRIMARY KEY (colName);
+
+ALTER TABLE tableName
+ADD CONSTRAINT PK_tableName PRIMARY KEY (col1,col2);
+
+ALTER TABLE tableName
+DROP PRIMARY KEY;
+
+
+
+
 
 -- to drop a UNIQUE constraint
 ALTER TABLE Persons
