@@ -50,3 +50,23 @@ ADD CONSTRAINT CHK_colName CHECK (Age>=18 AND City='Sandnes');
 
 ALTER TABLE tableName
 DROP CHECK CHK_colName;
+
+-- DEFAULT
+ALTER TABLE tableName
+ALTER columnName SET DEFAULT 'value';
+
+ALTER TABLE tableName
+ALTER columnName DROP DEFAULT;
+
+-- INDEX
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...);
+
+CREATE INDEX idx_pname
+ON Persons (LastName, FirstName);
+
+ALTER TABLE table_name
+DROP INDEX index_name;
