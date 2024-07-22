@@ -24,7 +24,7 @@ DROP INDEX UC_Person;
 ALTER TABLE tableName
 ADD PRIMARY KEY (colName);
 
--- primary key in multiple columns
+-- multiple columns
 ALTER TABLE tableName
 ADD CONSTRAINT PK_tableName PRIMARY KEY (col1,col2);
 
@@ -35,7 +35,7 @@ DROP PRIMARY KEY;
 ALTER TABLE tableName
 ADD FOREIGN KEY (colName) REFERENCES foreignTable(foreignCol);
 
--- foreign key in multiple columns
+-- multiple columns
 ALTER TABLE Orders
 ADD CONSTRAINT FK_PersonOrder
 FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
