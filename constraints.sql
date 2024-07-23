@@ -70,3 +70,6 @@ ON Persons (LastName, FirstName);
 
 ALTER TABLE table_name
 DROP INDEX index_name;
+
+-- AUTO INCREMENT
+ALTER TABLE tableName AUTO_INCREMENT;
