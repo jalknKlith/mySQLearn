@@ -22,6 +22,9 @@ SET colName = 'Value',
 colName2 = 'Value'
 WHERE colName3 = "Value";
 
+-- to delete all the data inside a table
+TRUNCATE TABLE Persons;
+
 -- making an ALIAS of the column name
 SELECT tableName AS aliasName
 FROM tableName;
