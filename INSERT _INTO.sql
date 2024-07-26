@@ -6,3 +6,7 @@ VALUES
 
 INSERT INTO tableName
 VALUES ('value1', 'value2', 'value3');
+
+-- updating a column of all records in a table
+UPDATE tableName
+SET colName = "Value";
