@@ -10,6 +10,9 @@ SELECT * FROM tableName WHERE columnName LIKE 'a%';
 --to return only different values
 SELECT DISTINCT * FROM tableName;
 
+-- to select all the records from a tableName where the value of the columnName is not with two certain values'
+SELECT * FROM tableName WHERE columnName NOT IN('Value1','Value2');
+
 -- to search DB
 SELECT DBname;
 
