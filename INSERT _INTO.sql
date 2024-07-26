@@ -21,3 +21,7 @@ UPDATE tableName
 SET colName = 'Value',
 colName2 = 'Value'
 WHERE colName3 = "Value";
+
+-- making an ALIAS of the column name
+SELECT tableName AS aliasName
+FROM tableName;
