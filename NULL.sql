@@ -9,3 +9,7 @@ CREATE TABLE Persons (
 
 ALTER TABLE Persons
 MODIFY Age int NOT NULL;
+
+-- searching all records from a table where a column is empty
+SELECT * FROM tableName
+WHERE colName IS NULL;
