@@ -1,6 +1,9 @@
 -- to select all the records from a tableName where the value of the columnName is with certain value'
 SELECT * FROM tableName WHERE columnName='Value';
 
+-- to select all the records from a tableName where the value of the columnName is with two certain values'
+SELECT * FROM tableName WHERE columnName IN('Value1','Value2');
+
 -- select all the records from a tableName where the value of the columnName starts with an "a"'
 SELECT * FROM tableName WHERE columnName LIKE 'a%';
 
