@@ -19,9 +19,13 @@ SELECT DISTINCT colName FROM tableName;
 -- to order by
 SELECT colNAME FROM tableNAME order by colNAME ASC|DESC;
 
--- to test for null values
-SELECT colNAME FROM tableNAME WHERE colNAME IS NULL;
-SELECT colNAME FROM tableNAME WHERE colNAME IS NOT NULL;
+-- to test for null values, where a column is empty
+SELECT colNAME FROM tableNAME
+WHERE colNAME IS NULL;
+
+-- to test for null values, where a column is not empty
+SELECT colNAME FROM tableNAME
+WHERE colNAME IS NOT NULL;
 
 -- to limit
 SELECT * FROM tableNAME LIMIT number;
