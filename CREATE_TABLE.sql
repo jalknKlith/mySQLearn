@@ -32,5 +32,9 @@ ADD columnName datatype;
 ALTER TABLE tableName
 DROP COLUMN columnName;
 
+-- to change the table name
+ALTER TABLE oldTableName
+RENAME TO newTableName;
+
 ALTER TABLE table_name
 MODIFY COLUMN columnName datatype;
