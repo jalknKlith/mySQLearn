@@ -1,0 +1,6 @@
+CREATE PROCEDURE procedureName (
+    [parameterList]
+)
+BEGIN
+    [procedureBody]
+END
